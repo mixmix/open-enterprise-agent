@@ -92,7 +92,7 @@ services:
       AGENT_DB_NAME: agent
       AGENT_DB_USER: postgres
       AGENT_DB_PASSWORD: postgres
-      DIDCOMM_SERVICE_URL: http://host.docker.internal:${PORT}/didcomm
+      DIDCOMM_SERVICE_URL: http://${DOCKERHOST}:${PORT}/didcomm
       PRISM_NODE_HOST: prism-node
       PRISM_NODE_PORT: 50053
       VAULT_ADDR: ${VAULT_ADDR:-http://vault-server:8200}
@@ -106,6 +106,12 @@ services:
       DEFAULT_WALLET_AUTH_API_KEY:
       GLOBAL_WEBHOOK_URL:
       GLOBAL_WEBHOOK_API_KEY:
+      WEBHOOK_PARALLELISM:
+      ADMIN_TOKEN:
+      API_KEY_SALT:
+      API_KEY_ENABLED:
+      API_KEY_AUTHENTICATE_AS_DEFAULT_USER:
+      API_KEY_AUTO_PROVISIONING:
     depends_on:
       db:
         condition: service_healthy

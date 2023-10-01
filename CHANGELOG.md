@@ -1,3 +1,63 @@
+## [1.16.4](https://github.com/hyperledger-labs/open-enterprise-agent/compare/prism-agent-v1.16.3...prism-agent-v1.16.4) (2023-09-29)
+
+
+### Bug Fixes
+
+* Integration flow ATL-5777 ([#738](https://github.com/hyperledger-labs/open-enterprise-agent/issues/738)) ([7cf927c](https://github.com/hyperledger-labs/open-enterprise-agent/commit/7cf927cc267460cc1708e424c0a63ae96689a42a))
+
+## [1.16.3](https://github.com/hyperledger-labs/open-enterprise-agent/compare/prism-agent-v1.16.2...prism-agent-v1.16.3) (2023-09-28)
+
+
+### Bug Fixes
+
+* Adding labels [skip ci] ([#737](https://github.com/hyperledger-labs/open-enterprise-agent/issues/737)) ([5182098](https://github.com/hyperledger-labs/open-enterprise-agent/commit/5182098f7bc6db479ee64d7133389732a38d174a))
+
+## [1.16.2](https://github.com/hyperledger-labs/open-enterprise-agent/compare/prism-agent-v1.16.1...prism-agent-v1.16.2) (2023-09-28)
+
+
+### Bug Fixes
+
+* Changing yq command [skip ci] ATL-5777 ([#736](https://github.com/hyperledger-labs/open-enterprise-agent/issues/736)) ([01bdfa7](https://github.com/hyperledger-labs/open-enterprise-agent/commit/01bdfa74056d983bc1fd494c99b1bab8496dc62f))
+* Integration flow ([#734](https://github.com/hyperledger-labs/open-enterprise-agent/issues/734)) ([c45a9eb](https://github.com/hyperledger-labs/open-enterprise-agent/commit/c45a9ebf0150245dfa5ebdc2eda94aa1e0fea8f3))
+* Renaming values.yml [skip ci] ATL-5777  ([#735](https://github.com/hyperledger-labs/open-enterprise-agent/issues/735)) ([bcd73c3](https://github.com/hyperledger-labs/open-enterprise-agent/commit/bcd73c310a1c033400f83cfa266cbe0aa304217a))
+
+## [1.16.1](https://github.com/hyperledger-labs/open-enterprise-agent/compare/prism-agent-v1.16.0...prism-agent-v1.16.1) (2023-09-27)
+
+
+### Bug Fixes
+
+* Adding localhost environment variable in run.sh script for local development ([#728](https://github.com/hyperledger-labs/open-enterprise-agent/issues/728)) ([1a904a6](https://github.com/hyperledger-labs/open-enterprise-agent/commit/1a904a6f72676fb89f87dd2da14c01d291371f8c))
+* correct typo on sts header (dmax -> max) ([#726](https://github.com/hyperledger-labs/open-enterprise-agent/issues/726)) ([2c5bc51](https://github.com/hyperledger-labs/open-enterprise-agent/commit/2c5bc51fc66b2c62a7c8ba7e25944704c335253f))
+* **prism-agent:** introduce generic secret store for CD ([#727](https://github.com/hyperledger-labs/open-enterprise-agent/issues/727)) ([3d4aacd](https://github.com/hyperledger-labs/open-enterprise-agent/commit/3d4aacdd9a7f66f2f656d3c31b3f8202cc37c51b))
+* Separate config for integration flow ATL-5777 ([#731](https://github.com/hyperledger-labs/open-enterprise-agent/issues/731)) ([9e0e2de](https://github.com/hyperledger-labs/open-enterprise-agent/commit/9e0e2de77a25166f019f78356b2e98b60da7b3e1))
+* Separate config for integration flow ATL-5777 ([#733](https://github.com/hyperledger-labs/open-enterprise-agent/issues/733)) ([8380ccc](https://github.com/hyperledger-labs/open-enterprise-agent/commit/8380cccea0eee17c090928b1ae36b877a822177d))
+
+# [1.16.0](https://github.com/hyperledger-labs/open-enterprise-agent/compare/prism-agent-v1.15.0...prism-agent-v1.16.0) (2023-09-15)
+
+
+### Bug Fixes
+
+* change attribute for appuser to login ([#721](https://github.com/hyperledger-labs/open-enterprise-agent/issues/721)) ([a0e0a74](https://github.com/hyperledger-labs/open-enterprise-agent/commit/a0e0a7412172a7cc2010c39c8ee106319e710986))
+* entity create and update operation failures if the walletId does… ([#718](https://github.com/hyperledger-labs/open-enterprise-agent/issues/718)) ([4fe6677](https://github.com/hyperledger-labs/open-enterprise-agent/commit/4fe66773a5aad4dc2808dad036c54c4660b3a855))
+* **prism-agent:** define db app user privileges before app starts ([#722](https://github.com/hyperledger-labs/open-enterprise-agent/issues/722)) ([8039654](https://github.com/hyperledger-labs/open-enterprise-agent/commit/803965482e2634d488d2f4f364b041917be514a5))
+* **prism-agent:** incorrect present proof metric name and remove connectionID from flow metrics ([#720](https://github.com/hyperledger-labs/open-enterprise-agent/issues/720)) ([52e31b0](https://github.com/hyperledger-labs/open-enterprise-agent/commit/52e31b0721d959fa53c8c49a39288b7c50d4582d))
+* **prism-agent:** refine multi-tenant error response and validations ([#719](https://github.com/hyperledger-labs/open-enterprise-agent/issues/719)) ([1f9ede3](https://github.com/hyperledger-labs/open-enterprise-agent/commit/1f9ede395c4469bf26b167a6430ad42ea7cde301))
+* **prism-agent:** validate application config during startup ([#712](https://github.com/hyperledger-labs/open-enterprise-agent/issues/712)) ([46fd69b](https://github.com/hyperledger-labs/open-enterprise-agent/commit/46fd69bc2416c72dd457b29f06dd181cf65f52a0))
+* use postgres application user ([#717](https://github.com/hyperledger-labs/open-enterprise-agent/issues/717)) ([63403a5](https://github.com/hyperledger-labs/open-enterprise-agent/commit/63403a5d64860d4683ebaab00a86eec0578a21c0))
+
+
+### Features
+
+* **prism-agent:** Metrics for verification flow ([#714](https://github.com/hyperledger-labs/open-enterprise-agent/issues/714)) ([8bea26e](https://github.com/hyperledger-labs/open-enterprise-agent/commit/8bea26e955987e1543984e090bedad17a7863268))
+
+# [1.15.0](https://github.com/input-output-hk/atala-prism-building-blocks/compare/prism-agent-v1.14.2...prism-agent-v1.15.0) (2023-09-12)
+
+
+### Features
+
+* add security headers in helm-chart apisix route ([#697](https://github.com/input-output-hk/atala-prism-building-blocks/issues/697)) ([7f7e0a4](https://github.com/input-output-hk/atala-prism-building-blocks/commit/7f7e0a4b7709c9eb0dbfc0557ed68648a98e5756))
+* **prism-agent:** add multi-tenancy capability ([#696](https://github.com/input-output-hk/atala-prism-building-blocks/issues/696)) ([b6c9a40](https://github.com/input-output-hk/atala-prism-building-blocks/commit/b6c9a40733af1a80c2fc7c17650d1f9ca53c21da))
+
 ## [1.14.2](https://github.com/input-output-hk/atala-prism-building-blocks/compare/prism-agent-v1.14.1...prism-agent-v1.14.2) (2023-09-06)
 
 
