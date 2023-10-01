@@ -50,7 +50,7 @@ lazy val V = new {
   val zioJson = "0.6.2"
   val zioHttp = "0.0.5"
   val zioCatsInterop = "23.0.03"
-  val zioMetricsConnector = "2.1.0"
+  val zioMetricsConnector = "2.2.0"
   val zioMock = "1.0.0-RC11"
   val mockito = "3.2.16.0"
 
