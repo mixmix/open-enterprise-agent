@@ -40,49 +40,49 @@ inThisBuild(
 )
 
 lazy val V = new {
-  val munit = "1.0.0-M10" // "0.7.29"
+  val munit = "1.0.0-M8" // "0.7.29"
   val munitZio = "0.1.1"
 
   // https://mvnrepository.com/artifact/dev.zio/zio
   val zio = "2.0.18"
   val zioConfig = "3.0.7"
-  val zioLogging = "2.1.14"
-  val zioJson = "0.6.2"
-  val zioHttp = "0.0.5"
-  val zioCatsInterop = "23.0.03"
-  val zioMetricsConnector = "2.2.0"
+  val zioLogging = "2.0.1"
+  val zioJson = "0.3.0"
+  val zioHttp = "0.0.3"
+  val zioCatsInterop = "3.3.0"
+  val zioMetricsConnector = "2.1.0"
   val zioMock = "1.0.0-RC11"
-  val mockito = "3.2.17.0"
+  val mockito = "3.2.16.0"
 
   // https://mvnrepository.com/artifact/io.circe/circe-core
   val circe = "0.14.6"
 
-  val tapir = "1.6.4"
-  val tapirLegacy = "1.2.13" // TODO: remove
+  val tapir = "1.6.0"
+  val tapirLegacy = "1.2.3" // TODO: remove
 
   val typesafeConfig = "1.4.2"
   val protobuf = "3.1.9"
   val testContainersScala = "0.41.0"
 
-  val doobie = "1.0.0-RC4"
+  val doobie = "1.0.0-RC2"
   val quill = "4.7.3"
-  val flyway = "9.22.2"
-  val postgresDriver = "42.6.0"
-  val logback = "1.4.11"
-  val slf4j = "2.0.9"
+  val flyway = "9.8.3"
+  val postgresDriver = "42.2.27"
+  val logback = "1.4.8"
+  val slf4j = "2.0.7"
 
   val prismSdk = "1.4.1" // scala-steward:off
   val scalaUri = "4.0.3"
 
-  val jwtCirceVersion = "9.4.4"
-  val zioPreludeVersion = "1.0.0-RC21"
+  val jwtCirceVersion = "9.1.2"
+  val zioPreludeVersion = "1.0.0-RC16"
 
-  val bouncyCastle = "1.76"
+  val bouncyCastle = "1.70"
 
-  val jsonSchemaValidator = "1.0.87"
+  val jsonSchemaValidator = "1.0.86"
 
   val vaultDriver = "6.1.0"
-  val micrometer = "1.11.4"
+  val micrometer = "1.11.2"
 }
 
 /** Dependencies */
@@ -108,7 +108,7 @@ lazy val D = new {
   val circeParser: ModuleID = "io.circe" %% "circe-parser" % V.circe
 
   // https://mvnrepository.com/artifact/org.didcommx/didcomm/0.3.2
-  val didcommx: ModuleID = "org.didcommx" % "didcomm" % "0.3.2"
+  val didcommx: ModuleID = "org.didcommx" % "didcomm" % "0.3.1"
   val peerDidcommx: ModuleID = "org.didcommx" % "peerdid" % "0.3.0"
   val didScala: ModuleID = "app.fmgp" %% "did" % "0.0.0+113-61efa271-SNAPSHOT"
   // Customized version of numbus jose jwt
@@ -262,7 +262,7 @@ lazy val D_Pollux = new {
 
 lazy val D_Pollux_VC_JWT = new {
 
-  private lazy val circeJsonSchema = ("net.reactivecore" %% "circe-json-schema" % "0.4.1")
+  private lazy val circeJsonSchema = ("net.reactivecore" %% "circe-json-schema" % "0.3.0")
     .cross(CrossVersion.for3Use2_13)
     .exclude("io.circe", "circe-core_2.13")
     .exclude("io.circe", "circe-generic_2.13")
@@ -279,7 +279,7 @@ lazy val D_Pollux_VC_JWT = new {
   val zioTestSbt = "dev.zio" %% "zio-test-sbt" % V.zio % Test
   val zioTestMagnolia = "dev.zio" %% "zio-test-magnolia" % V.zio % Test
 
-  val scalaTest = "org.scalatest" %% "scalatest" % "3.2.17" % Test
+  val scalaTest = "org.scalatest" %% "scalatest" % "3.2.16" % Test
 
   // Dependency Modules
   val zioDependencies: Seq[ModuleID] = Seq(zio, zioPrelude, zioTest, zioTestSbt, zioTestMagnolia)
@@ -306,25 +306,25 @@ lazy val D_PrismAgent = new {
 
   // Added here to make prism-crypto works.
   // Once migrated to apollo, re-evaluate if this should be removed.
-  val bouncyBcpkix = "org.bouncycastle" % "bcpkix-jdk18on" % V.bouncyCastle
-  val bouncyBcprov = "org.bouncycastle" % "bcprov-jdk18on" % V.bouncyCastle
+  val bouncyBcpkix = "org.bouncycastle" % "bcpkix-jdk15on" % V.bouncyCastle
+  val bouncyBcprov = "org.bouncycastle" % "bcprov-jdk15on" % V.bouncyCastle
 
   val logback = "ch.qos.logback" % "logback-classic" % V.logback
 
   val tapirSwaggerUiBundle = "com.softwaremill.sttp.tapir" %% "tapir-swagger-ui-bundle" % V.tapir
   val tapirJsonZio = "com.softwaremill.sttp.tapir" %% "tapir-json-zio" % V.tapir
 
-  // FIXME: using newest tapir (1.6.4) for this dependency needs refactoring, because it has transitive dependency on zio-http 3.0.0,
+  // FIXME: using newest tapir (1.6.0) for this dependency needs refactoring, because it has transitive dependency on zio-http 3.0.0,
   //   if used all imports for zio.http will use ne newest version, which will break the compilation
   val tapirZioHttpServer = "com.softwaremill.sttp.tapir" %% "tapir-zio-http-server" % V.tapirLegacy
   val tapirHttp4sServerZio = "com.softwaremill.sttp.tapir" %% "tapir-http4s-server-zio" % V.tapir
-  val http4sBlazeServer = "org.http4s" %% "http4s-blaze-server" % "0.23.15"
+  val http4sBlazeServer = "org.http4s" %% "http4s-blaze-server" % "0.23.12"
 
   val tapirRedocBundle = "com.softwaremill.sttp.tapir" %% "tapir-redoc-bundle" % V.tapir
 
   val tapirSttpStubServer =
     "com.softwaremill.sttp.tapir" %% "tapir-sttp-stub-server" % V.tapir % Test
-  val sttpClient3ZioJson = "com.softwaremill.sttp.client3" %% "zio-json" % "3.8.16" % Test
+  val sttpClient3ZioJson = "com.softwaremill.sttp.client3" %% "zio-json" % "3.8.3" % Test
 
   val quillDoobie =
     "io.getquill" %% "quill-doobie" % V.quill exclude ("org.scala-lang.modules", "scala-java8-compat_3")
@@ -573,7 +573,7 @@ lazy val agentDidcommx = project
 lazy val agentCliDidcommx = project
   .in(file("mercury/mercury-library/agent-cli-didcommx"))
   .settings(name := "mercury-agent-cli-didcommx")
-  .settings(libraryDependencies += "com.google.zxing" % "core" % "3.5.2")
+  .settings(libraryDependencies += "com.google.zxing" % "core" % "3.5.0")
   .settings(libraryDependencies += D.zioHttp)
   .dependsOn(agentDidcommx)
 
@@ -754,9 +754,7 @@ lazy val prismAgentWalletAPI = project
   .settings(prismAgentConnectCommonSettings)
   .settings(
     name := "prism-agent-wallet-api",
-    libraryDependencies ++= D_PrismAgent.keyManagementDependencies ++ D_PrismAgent.postgresDependencies ++ Seq(
-      D.zioMock
-    )
+    libraryDependencies ++= D_PrismAgent.keyManagementDependencies ++ D_PrismAgent.postgresDependencies ++ Seq(D.zioMock)
   )
   .dependsOn(
     agentDidcommx,
