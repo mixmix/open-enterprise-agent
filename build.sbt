@@ -64,7 +64,7 @@ lazy val V = new {
   val testContainersScala = "0.41.0"
 
   val doobie = "1.0.0-RC2"
-  val quill = "4.7.3"
+  val quill = "4.8.0"
   val flyway = "9.8.3"
   val postgresDriver = "42.2.27"
   val logback = "1.4.11"
