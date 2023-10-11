@@ -162,7 +162,9 @@ object MainApp extends ZIOAppDefault {
           VerificationPolicyServiceImpl.layer,
           WalletManagementServiceImpl.layer,
           // authentication
-          AppModule.authenticatorLayer,
+          AppModule.builtInAuthenticatorLayer,
+          AppModule.keycloakAuthenticatorLayer,
+          DefaultAuthenticator.layer,
           // grpc
           GrpcModule.prismNodeStubLayer,
           // storage
